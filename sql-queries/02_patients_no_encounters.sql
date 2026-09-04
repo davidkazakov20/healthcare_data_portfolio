@@ -1,9 +1,14 @@
+-- ============================================
 -- Query 2: Patients With No Encounters
+-- ============================================
 -- Purpose: Find patients registered in the system
--- but with no encounter history
--- This could indicate registration errors,
--- duplicate records, or missing interface data
+--          but with no encounter history
+-- Business Impact: Could indicate registration
+--          errors or missing HL7 interface data
 -- Skills: LEFT JOIN + IS NULL
+-- Author: David Kazakov
+-- Date: September 2026
+-- ============================================
 
 SELECT
     p.patient_id,
