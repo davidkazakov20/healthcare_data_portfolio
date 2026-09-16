@@ -1,29 +1,20 @@
--- ============================================
--- Query 3: Orphaned Lab Results
--- ============================================
--- Purpose: Find lab results referencing
---          encounters that don't exist
---          in the encounters table
---
--- Business Impact: Indicates referential
---          integrity failure -- common when
---          HL7 lab results arrive before
---          encounter is created or when
---          encounter creation fails
---
--- Skills: LEFT JOIN + IS NULL
--- Author: David Kazakov
--- Date: September 2026
--- ============================================
+-- ============================================================
+-- Query 3: Lab Results With No Matching Encounter
+-- Business reason: An ORU (lab result) message should always tie
+-- back to a valid encounter. Orphaned results usually indicate an
+-- ADT/ORU timing mismatch at the interface layer (result message
+-- arrived before/without its encounter, or the encounter was later
+-- merged/deleted) and should be routed back to the interface team.
+-- Skills shown: LEFT JOIN + IS NULL
+-- ============================================================
 
 SELECT
-  	l.result_id,
-    l.patient_id,
-    l.encounter_id,
-    l.test_name,
-    l.result_value,
-    l.result_status
-FROM lab_results AS l
-LEFT JOIN encounters AS e
-ON l.encounter_id = e.encounter_id
+    lr.lab_result_id,
+    lr.encounter_id AS referenced_encounter_id,
+    lr.patient_id,
+    lr.test_name,
+    lr.result_date
+FROM lab_results lr
+LEFT JOIN encounters e ON lr.encounter_id = e.encounter_id
 WHERE e.encounter_id IS NULL
+ORDER BY lr.result_date DESC;
