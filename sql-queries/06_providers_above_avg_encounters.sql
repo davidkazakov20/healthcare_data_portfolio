@@ -5,6 +5,8 @@
 -- check whether high-volume interfaces/providers correlate with
 -- higher data quality issue rates.
 -- Skills shown: Subquery
+-- Author: David Kazakov
+-- Date: September 2026
 -- ============================================================
 
 SELECT
