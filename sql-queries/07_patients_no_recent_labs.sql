@@ -6,6 +6,8 @@
 -- days, that can indicate either a genuine care gap or a silently
 -- broken result feed for that patient/location.
 -- Skills shown: CTE + date functions
+-- Author: David Kazakov
+-- Date: September 2026
 -- ============================================================
 
 WITH last_lab_per_patient AS (
