@@ -5,6 +5,8 @@
 -- patient is, mirroring a real critical-results worklist a
 -- clinical data or QA team would review.
 -- Skills shown: 3-table JOIN
+-- Author: David Kazakov
+-- Date: September 2026
 -- ============================================================
 
 SELECT
