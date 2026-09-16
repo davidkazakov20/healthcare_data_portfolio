@@ -6,6 +6,8 @@
 -- uncorrected, this breaks "active medication" logic downstream
 -- (a med may incorrectly show as inactive or vice versa).
 -- Skills shown: CASE WHEN + date logic
+-- Author: David Kazakov
+-- Date: September 2026
 -- ============================================================
 
 SELECT
