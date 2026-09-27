@@ -17,7 +17,7 @@ quantifying it, and communicating it to non-technical stakeholders.
 
 ## Other Projects
 
-- **[HL7 to FHIR Integration Pipeline](https://github.com/davidkazakov20/healthcare_data_portfolio/tree/main/hl7-fihr)** — End-to-end HL7 v2.x to FHIR R4 conversion pipeline built in Mirth Connect, demonstrating interface engine configuration and healthcare interoperability standards mapping.
+- **[HL7 to FHIR Integration Pipeline](https://github.com/davidkazakov20/healthcare_data_portfolio/tree/main/hl7-fhir)** — End-to-end HL7 v2.x to FHIR R4 conversion pipeline built in Mirth Connect, demonstrating interface engine configuration and healthcare interoperability standards mapping.
 
 ## Problem → Approach → Findings
 
