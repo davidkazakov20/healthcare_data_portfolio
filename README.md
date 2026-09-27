@@ -9,7 +9,7 @@ of data quality issues that surface in HL7 ADT/ORU interface feeds.
 
 ## Why this project
 
-Working daily with HL7 interfaces (Mirth Connect) and SQL as a Sr. QA Engineer 
+Working daily with HL7 interfaces (Mirth Connect) and SQL
 at an oncology diagnostics company, I built this project to apply — and showcase — 
 the kind of data quality auditing that Interface Analysts, Epic Analysts, and 
 Healthcare Data Analysts do: finding where patient data breaks down across systems, 
