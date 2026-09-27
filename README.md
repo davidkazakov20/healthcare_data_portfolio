@@ -4,7 +4,7 @@ A SQL + Power BI audit of a simulated hospital data environment (patient
 registration, encounters, lab results, medications), modeled on the kinds
 of data quality issues that surface in HL7 ADT/ORU interface feeds.
 
-**Author:** David Kazakov — Sr. QA Engineer, healthcare data/interfaces
+**Author:** David Kazakov — Sr. QA Engineer | Integration & Interface Analyst, healthcare data/interfaces
 ([LinkedIn](https://linkedin.com/in/davidkazakov))
 
 ## Why this project
