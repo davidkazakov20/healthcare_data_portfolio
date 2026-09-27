@@ -1,5 +1,5 @@
-   remote_theme: pages-themes/minimal@v0.2.0
-   plugins:
-     - jekyll-remote-theme
-   title: Healthcare Data Quality Audit
-   description: SQL + Power BI audit of a simulated hospital data environment
+remote_theme: pages-themes/architect@v0.2.0
+plugins:
+  - jekyll-remote-theme
+title: Healthcare Data Quality Audit
+description: SQL + Power BI audit of a simulated hospital data environment
