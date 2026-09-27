@@ -1,11 +1,9 @@
 # HL7 to FHIR Integration Pipeline
  
 ## About
-End-to-end HL7 v2.x to FHIR R4 conversion pipeline built in Mirth Connect, demonstrating interface engine configuration 
-and healthcare interoperability standards mapping.
-Built as a hands-on demonstration of HL7-to-FHIR mapping skills directly relevant to my work as a 
-Sr. QA Engineer / Healthcare Integration & Interface Analyst at an oncology diagnostics company, 
-working daily with Mirth Connect interface configuration.
+End-to-end HL7 v2.x to FHIR R4 conversion pipeline built in Mirth Connect, demonstrating 
+interface engine configuration and healthcare interoperability standards mapping — directly 
+relevant to daily Mirth Connect work in a clinical lab setting.
  
 ## Skills Demonstrated
 - Mirth Connect channel configuration
