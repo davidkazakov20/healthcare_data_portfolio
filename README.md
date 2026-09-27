@@ -15,6 +15,10 @@ the kind of data quality auditing that Interface Analysts, Epic Analysts, and
 Healthcare Data Analysts do: finding where patient data breaks down across systems, 
 quantifying it, and communicating it to non-technical stakeholders.
 
+## Other Projects
+
+- **[HL7 to FHIR Integration Pipeline](hl7-fihr/README.md)** — End-to-end HL7 v2.x to FHIR R4 conversion pipeline built in Mirth Connect, demonstrating interface engine configuration and healthcare interoperability standards mapping.
+
 ## Problem → Approach → Findings
 
 **Problem:** Hospital data systems accumulate quality issues from interface
