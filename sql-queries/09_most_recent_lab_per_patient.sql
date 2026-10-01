@@ -5,6 +5,10 @@
 -- patient's latest result per visible list row rather than every
 -- historical result.
 -- Skills shown: ROW_NUMBER (window function)
+-- Design note: Used ROW_NUMBER() instead of a correlated subquery
+-- with MAX(result_date), since it naturally extends to "top 3
+-- most recent" later with no rewrite — just changing
+-- WHERE rn <= 1 to <= 3.
 -- ============================================================
 
 SELECT
