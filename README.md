@@ -92,14 +92,14 @@ See `/docs/dashboard-build-guide.md` for the page-by-page build spec.
 /sample-data/       schema.sql, data generator script, and the SQLite db
 /powerbi/           Power BI file + CSV exports used as its data source
 /docs/              data dictionary, screenshots
+```
 
 ## How to Reproduce
 
-1. `sample-data/generate_data.py` builds `healthcare_audit.db` (SQLite)
-   from `schema.sql`, with intentional data quality issues injected.
-2. Run any query directly: `sqlite3 healthcare_audit.db < ../sql-queries/01_duplicate_patients.sql`
-3. `sample-data/run_queries.py` runs all 10 queries and exports results
-   to `/powerbi/csv-exports/` for the dashboard.
+1. `sample-data/generate_data.py` builds `healthcare_audit.db` (SQLite) from `schema.sql`, with intentional data quality issues injected.
+2. Run any query directly:  
+   `sqlite3 healthcare_audit.db < ../sql-queries/01_duplicate_patients.sql`
+3. `sample-data/run_queries.py` runs all 10 queries and exports results to `/powerbi/csv-exports/` for the dashboard.
 
 ## Other Projects
 
@@ -107,6 +107,4 @@ See `/docs/dashboard-build-guide.md` for the page-by-page build spec.
 
 ## Data Note
 
-All data in this project is synthetically generated (via the `Faker`
-library) — no real patient information is used anywhere in this
-repository.
+All data in this project is synthetically generated using the `Faker` library — no real patient information is used anywhere in this repository.
