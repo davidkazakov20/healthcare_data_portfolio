@@ -30,19 +30,6 @@ Working daily with HL7 interfaces, Mirth Connect, and SQL at an oncology diagnos
 
 ## Case Study
 
-The same handful of problems tend to show up again and again in HL7 integration work.
-
-A patient gets registered twice because the search fails to find the existing record. An ADT message is delayed or dropped during a brief interface outage, never reaching the inbound interface and leaving the target system with an encounter but no related order. Someone fixes a bad record manually, closes the ticket, and no one verifies whether the source and target systems are still in sync.
-
-Individually, these issues can look minor. Across an EHR or HIE environment, they can create duplicate charts, broken patient-to-encounter relationships, and reports that appear correct but are based on incomplete data.
-
-In this audit of 109 patients, I found:
-
-- 6 patients with duplicate registrations
-- 17 patients registered with no encounters
-- 12 lab results with no matching encounter
-- 1 medication record with an end date earlier than its start date
-
 The duplicate patient records were the most important finding.
 
 Six patients were each split across two MRNs, meaning a clinician could open what looks like a complete chart and still miss food or drug allergies, prior lab results, diagnoses, or procedures stored under the second record.
