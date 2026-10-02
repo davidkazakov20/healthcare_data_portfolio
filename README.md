@@ -1,19 +1,19 @@
 # Healthcare Data Quality Audit
 
-A SQL + Power BI audit of a simulated hospital data environment (patient registration, encounters, lab results, medications), modeled on the kinds of data quality issues that surface in HL7 ADT/ORU interface feeds.
+A SQL + Power BI audit of a simulated hospital dataset covering patient registration, encounters, lab results, and medications, built around common data quality issues found in HL7 ADT and ORU interface feeds.
 
 **Author:** David Kazakov — Sr. QA Engineer | Integration & Interface Analyst, healthcare data/interfaces  
 [LinkedIn](https://linkedin.com/in/davidkazakov)
 
 ## Why this project
 
-Working daily with HL7 interfaces, Mirth Connect, and SQL at an oncology diagnostics company, I built this project to demonstrate the kind of data quality work performed by Interface Analysts and Healthcare Data Analysts: finding where patient data breaks across systems, measuring the impact, and communicating the findings clearly.
+Working daily with HL7 interfaces, Mirth Connect, and SQL in oncology diagnostics, I built this project to show how I approach real healthcare data quality problems — tracing where data breaks across systems, measuring the impact, and sharing findings with development.
 
 ## Problem → Approach → Findings
 
-**Problem:** Hospital data systems accumulate quality issues from interface timing gaps, duplicate registrations, and manual entry errors. Left undetected, these can cause fragmented patient records, missed critical results, and broken downstream reporting.
+**Problem:** Hospital data systems often pick up quality issues from interface timing gaps, duplicate registrations, and manual entry errors. If they go unnoticed, they can lead to fragmented patient records, missed results, and unreliable downstream reporting.
 
-**Approach:** Built a simulated hospital database (109 patients, 268 encounters, 360 lab results, 59 medications) with realistic, deliberately injected data quality issues. Wrote 10 SQL audit queries covering duplicate detection, referential integrity, completeness, and trend analysis. Visualized results in a 4-page Power BI dashboard.
+**Approach:** I built a simulated hospital database with 109 patients, 268 encounters, 360 lab results, and 59 medications, then intentionally added realistic data quality issues. I wrote 10 SQL audit queries to check for duplicates, broken relationships, missing data, and trends, and summarized the results in a 4-page Power BI dashboard.
 
 **Findings (this dataset):**
 
@@ -26,7 +26,7 @@ Working daily with HL7 interfaces, Mirth Connect, and SQL at an oncology diagnos
 | Patients with no lab activity in 90+ days | 66 |
 | Lab result NULL rate (worst test type) | 11.1% (Troponin I) |
 
-**Business impact:** In a live system, the duplicate registrations alone represent 6 patients whose clinical history is split across two MRNs — each a medication reconciliation and clinical safety risk. The orphaned lab results could indicate an interface timing or message-processing issue rather than a simple data-entry problem, which changes where the investigation starts.
+**Business impact:** In a live system, 6 duplicate registrations would mean 6 patients with clinical history split across two MRNs — creating a real risk of missed medications, allergies, or prior results.
 
 ## Case Study
 
