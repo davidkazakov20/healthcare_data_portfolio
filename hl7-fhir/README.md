@@ -15,11 +15,13 @@ relevant to daily Mirth Connect work in a clinical lab setting.
  
 ## Mappings Completed
 | HL7 Message | FHIR Resource | Status |
+|---|---|---|
 | ADT A01 (PID segment) | Patient | Complete |
 | ADT A01 (PV1 segment) | Encounter | Complete |
  
 ## HL7 to FHIR Field Mapping
 | HL7 Field | FHIR Field |
+|---|---|
 | PID-3 | Patient.id |
 | PID-5.1 | Patient.name.family |
 | PID-5.2 | Patient.name.given |
