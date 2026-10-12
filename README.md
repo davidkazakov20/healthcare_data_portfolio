@@ -70,7 +70,6 @@ Four pages, built from the CSV exports in `/powerbi/csv-exports/`:
 3. **Lab Results Analysis** — abnormal result rates and trends by test type
 4. **Provider Performance** — encounter counts, above-average outliers
 
-See `/docs/dashboard-build-guide.md` for the page-by-page build spec.
 
 ## Repository Structure
 
