@@ -70,7 +70,17 @@ Four pages, built from the CSV exports in `/powerbi/csv-exports/`:
 3. **Lab Results Analysis** — abnormal result rates and trends by test type
 4. **Provider Performance** — encounter counts, above-average outliers
 
+### Dashboard Screenshots
 
+#### 1. Data Quality Overview
+![Data Quality Overview](powerbi/page1-data-quality-overview.png)
+
+#### 2. Patient Summary
+![Patient Summary](powerbi/page2-patient-summary.png)
+
+#### 3. Lab Results Analysis
+![Lab Results Analysis](powerbi/page3-lab-results-analysis.png)
+  
 ## Repository Structure
 
 ```text
