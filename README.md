@@ -75,8 +75,8 @@ Four pages, built from the CSV exports in `/powerbi/csv-exports/`:
 
 ```text
 /sql-queries/       10 standalone .sql files, one per audit query
-/powerbi/            Power BI file, PDF export, and dashboard page screenshots
-/hl7-fhir/            HL7 v2 to FHIR R4 pipeline project (see link below)
+/powerbi/           Power BI file, PDF export, and dashboard page screenshots
+/hl7-fhir/          HL7 v2 to FHIR R4 pipeline project (see link below)
 ```
 
 ## How to Explore This Project
