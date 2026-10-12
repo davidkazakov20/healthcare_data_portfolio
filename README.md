@@ -76,17 +76,14 @@ See `/docs/dashboard-build-guide.md` for the page-by-page build spec.
 
 ```text
 /sql-queries/       10 standalone .sql files, one per audit query
-/sample-data/       schema.sql, data generator script, and the SQLite db
-/powerbi/           Power BI file + CSV exports used as its data source
-/docs/              data dictionary, screenshots
+/powerbi/            Power BI file, PDF export, and dashboard page screenshots
+/hl7-fhir/            HL7 v2 to FHIR R4 pipeline project (see link below)
 ```
 
-## How to Reproduce
+## How to Explore This Project
 
-1. `sample-data/generate_data.py` builds `healthcare_audit.db` (SQLite) from `schema.sql`, with intentional data quality issues injected.
-2. Run any query directly:  
-   `sqlite3 healthcare_audit.db < ../sql-queries/01_duplicate_patients.sql`
-3. `sample-data/run_queries.py` runs all 10 queries and exports results to `/powerbi/csv-exports/` for the dashboard.
+- Browse the `/sql-queries/` folder — each file includes a header comment explaining the business reason it matters, not just what it does.
+- Review the full 4-page dashboard in `powerbi/healthcare-data-quality-dashboard.pdf`, or open the screenshots directly.
 
 ## Other Projects
 
