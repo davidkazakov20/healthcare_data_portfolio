@@ -1,10 +1,9 @@
 -- ============================================================
 -- Query 1: Duplicate Patient Registrations
--- Business reason: Duplicate MRNs fragment a patient's clinical
--- history across records, causing missed allergies, duplicate
--- orders, and incomplete med reconciliation. Common root cause:
--- ADT A04 registration re-entry when an existing MRN isn't found
--- at check-in.
+-- Business reason: Matching name and DOB can flag potential duplicate
+-- registrations, but does not confirm patient identity. Review
+-- MRNs, assigning authorities, and additional demographics before
+-- concluding records belong to the same patient.
 -- Skills shown: GROUP BY + HAVING
 -- ============================================================
 

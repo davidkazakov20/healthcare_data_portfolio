@@ -5,7 +5,8 @@
 -- Patient Summary page and is also a useful QA sanity check: a
 -- sudden drop in volume for a given month often signals an
 -- interface outage rather than an actual drop in patient visits.
--- Skills shown: GROUP BY + date functions
+-- Skills shown: GROUP BY + SQLite strftime() date function
+-- Date grouping assumes SQLite-readable ISO-formatted admit_date.
 -- ============================================================
 
 SELECT

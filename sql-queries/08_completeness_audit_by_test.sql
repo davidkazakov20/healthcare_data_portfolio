@@ -2,9 +2,9 @@
 -- Query 8: Data Completeness Audit — NULL % Per Test Type
 -- Business reason: The core "data quality scorecard" metric.
 -- Measures what fraction of lab results are missing a numeric
--- result_value per test — a direct proxy for interface reliability
--- per feed/test type, and the headline metric on the Power BI
--- Data Quality Overview page.
+-- result_value per test — a completeness indicator for the synthetic dataset.
+-- A NULL numeric value is not, by itself, evidence of feed failure
+-- (e.g., some tests may report qualitative results).
 -- Skills shown: GROUP BY + CASE WHEN
 -- ============================================================
 

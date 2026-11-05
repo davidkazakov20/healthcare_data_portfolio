@@ -1,10 +1,9 @@
 -- ============================================================
 -- Query 3: Lab Results With No Matching Encounter
--- Business reason: An ORU (lab result) message should always tie
--- back to a valid encounter. Orphaned results usually indicate an
--- ADT/ORU timing mismatch at the interface layer (result message
--- arrived before/without its encounter, or the encounter was later
--- merged/deleted) and should be routed back to the interface team.
+-- Business reason: This audit flags lab rows whose encounter_id
+-- has no matching encounter row. Some valid laboratory workflows
+-- may not require encounter linkage; investigate the data model,
+-- feed timing, and source-system rules before calling it an error.
 -- Skills shown: LEFT JOIN + IS NULL
 -- ============================================================
 

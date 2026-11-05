@@ -5,10 +5,9 @@
 -- check whether high-volume interfaces/providers correlate with
 -- higher data quality issue rates.
 -- Skills shown: Subquery
--- Design note: Used a subquery in FROM here instead of a window
--- function (AVG() OVER), since this needs to run cleanly on both
--- MySQL and SQLite, and the dataset is small enough that
--- performance isn't a concern.
+-- Design note: Average is calculated across providers with at
+-- least one encounter. Providers with zero encounters are excluded.
+-- SQLite is the reference dialect for this portfolio.
 -- Author: David Kazakov
 -- Date: September 2026
 -- ============================================================

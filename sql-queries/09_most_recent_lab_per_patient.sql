@@ -34,7 +34,7 @@ FROM (
         lr.result_date,
         ROW_NUMBER() OVER (
             PARTITION BY lr.patient_id
-            ORDER BY lr.result_date DESC
+            ORDER BY lr.result_date DESC, lr.lab_result_id DESC
         ) AS rn
     FROM lab_results lr
     JOIN patients p ON lr.patient_id = p.patient_id

@@ -1,10 +1,9 @@
 -- ============================================================
 -- Query 2: Patients Registered but Never Had an Encounter
 -- Business reason: Flags "dangling" registrations — patients
--- created in the system (often via ADT feed or pre-registration)
--- who never actually presented for care. Useful for identifying
--- interface issues where registration messages fire without a
--- corresponding visit message ever following.
+-- without linked encounters in this dataset. Pre-registration,
+-- data retention, and interface timing can all explain this flag;
+-- it is not proof of an integration failure.
 -- Skills shown: LEFT JOIN + IS NULL
 -- ============================================================
 

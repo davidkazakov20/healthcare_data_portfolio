@@ -1,15 +1,16 @@
 -- ============================================================
 -- Query 7: Patients With No Lab Results in the Last 90 Days
--- Business reason: A care-gap / follow-up candidate list — also
--- doubles as a data-flow check: if a patient should be receiving
--- regular labs (e.g. chronic care) and none have landed in 90
--- days, that can indicate either a genuine care gap or a silently
--- broken result feed for that patient/location.
+-- Business reason: Flags patients with no recorded labs during
+-- the 90 days preceding a fixed demo as-of date (2026-08-30).
+-- This is not proof that testing was clinically indicated or that
+-- an interface failed. Fixed dates keep demo results reproducible.
 -- Skills shown: CTE + date functions
 -- Author: David Kazakov
 -- Date: September 2026
 -- ============================================================
 
+-- SQLite reference implementation; 2026-08-30 is an intentional
+-- historical snapshot date, not today's date.
 WITH last_lab_per_patient AS (
     SELECT
         patient_id,

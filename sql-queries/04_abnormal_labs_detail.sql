@@ -1,9 +1,9 @@
 -- ============================================================
 -- Query 4: Abnormal Lab Results With Patient + Provider Detail
--- Business reason: Surfaces clinically actionable results
--- (High/Low/Critical) alongside who ordered them and who the
--- patient is, mirroring a real critical-results worklist a
--- clinical data or QA team would review.
+-- Business reason: Surfaces flagged results (High/Low/Critical) with patient
+-- and encounter-associated provider details. The provider on the
+-- encounter is not necessarily the ordering provider; clinical
+-- urgency requires additional context.
 -- Skills shown: 3-table JOIN
 -- Author: David Kazakov
 -- Date: September 2026
@@ -18,8 +18,8 @@ SELECT
     lr.result_value,
     lr.result_units,
     lr.abnormal_flag,
-    pr.first_name AS ordering_provider_first,
-    pr.last_name  AS ordering_provider_last,
+    pr.first_name AS encounter_provider_first,
+    pr.last_name  AS encounter_provider_last,
     pr.specialty
 FROM lab_results lr
 JOIN patients p        ON lr.patient_id = p.patient_id
