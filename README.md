@@ -3,7 +3,7 @@
 **Healthcare data quality portfolio project** focused on patient registration, encounters, laboratory results, medications, and interoperability-related data validation.
 
 **David Kazakov** | Healthcare Interoperability & Integration Analyst | Senior QA Engineer  
-[LinkedIn](https://linkedin.com/in/davidkazakov) | **Email:** [david.kazakov@outlook.com](mailto:david.kazakov@outlook.com)
+[LinkedIn](https://linkedin.com/in/davidkazakov) | **Email:** [david.kazakov@outlook.com](mailto:david.kazakov@outlook.com) 
 
 ## Project Navigation
 
